@@ -1,0 +1,47 @@
+/* BASE */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f8f8f8;
+  scroll-behavior: smooth;
+}
+a { text-decoration: none; color: inherit; }
+.section { padding: 4rem 1rem; max-width: 800px; margin: auto; }
+.alt { background: #fff; }
+
+/* NAV */
+.nav {
+  position: sticky; top: 0; background: rgba(0,0,0,0.8);
+  display: flex; justify-content: center; gap: 1rem;
+  padding: 1rem; z-index: 10;
+}
+.nav a { color: #fff; padding: 0.5rem; }
+.nav-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; }
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+  background: url('assets/hero-reel.mp4') no-repeat center/cover;
+  color: #fff;
+}
+.hero .logo { width: 100px; display: block; margin: auto; }
+.hero h1 { margin: 1rem 0; font-size: 2.5rem; }
+.cta {
+  display: inline-block; margin-top: 1rem;
+  padding: 0.75rem 1.5rem; background: #f04e30; color: white;
+  border-radius: 5px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center; padding: 2rem 1rem;
+  background: #222; color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2rem; }
+}
