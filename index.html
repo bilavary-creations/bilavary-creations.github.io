@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Bilavari Creations – Narrative-driven video production for businesses." />
   <meta property="og:title" content="Bilavari Creations" />
   <meta property="og:description" content="Empowering brands through innovative narrative-driven video solutions." />
@@ -13,67 +10,172 @@
   <title>Bilavari Creations</title>
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-dot-outline"></div>
   <!-- NAV -->
   <nav class="nav">
-    <a href="#about">About</a>
-    <a href="#mission">Vision & Mission</a>
-    <a href="#services">Services</a>
-    <a href="#why-us">Why Us</a>
-    <a href="#contact">Contact</a>
-    <button class="nav-toggle">☰</button>
+    <div class="nav-brand">
+      <img src="assets/logo.png" alt="Bilavari Creations Logo" class="nav-logo" />
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#contact" class="nav-cta">Contact Us</a>
+    </div>
+    <button class="nav-toggle"><i class="fas fa-bars"></i></button>
   </nav>
 
   <!-- HERO -->
   <header class="hero">
-    <img src="assets/logo.png" alt="Bilavari Creations Logo" class="logo" />
-    <h1>Visual Storytelling That Transforms</h1>
-    <a href="#contact" class="cta">Get in Touch</a>
+    <div class="hero-content">
+      <h1>Where Imagination Takes Flight</h1>
+      <p class="hero-subtitle">Crafting visual symphonies that dance between reality and dreams</p>
+      <div class="hero-cta-group">
+        <a href="#contact" class="cta primary">Start Your Project</a>
+        <a href="#portfolio" class="cta secondary">View Our Work</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <!-- Replace with your hero image -->
+      <img src="assets/hero-image.jpg" alt="Video Production Process" />
+    </div>
   </header>
 
   <!-- ABOUT -->
   <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>
-      Founded in 2023 by Vikram and Shivaji, Bilavari Creations crafts
-      narrative-driven video solutions that spark growth and success for your brand.
-    </p>
+    <div class="section-grid">
+      <div class="section-content">
+        <h2>Architects of Visual Dreams</h2>
+        <p class="section-lead">Born in 2023, Bilavari Creations is where imagination meets innovation, where every frame tells a story, and every story opens a door to endless possibilities.</p>
+        <p>Under the visionary leadership of Vikram and Shivaji, our creative alchemists transform raw ideas into golden moments, weaving together light, sound, and emotion into tapestries of unforgettable experiences.</p>
+      </div>
+      <div class="section-image">
+        <!-- Replace with your about image -->
+        <img src="assets/about-image.jpg" alt="Our Team at Work" class="rounded-image" />
+      </div>
+    </div>
   </section>
 
-  <!-- MISSION & VISION -->
-  <section id="mission" class="section alt">
-    <h2>Our Vision & Mission</h2>
-    <p><strong>Vision:</strong> To lead in video production, blending strategy with storytelling.</p>
-    <p><strong>Mission:</strong> To deliver innovative audio-video services that help clients thrive.</p>
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section alt">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="portfolio-grid">
+      <!-- Replace src with your portfolio images -->
+      <div class="portfolio-item">
+        <img src="assets/portfolio-1.jpg" alt="Corporate Video Production" />
+        <div class="portfolio-overlay">
+          <h3>Visual Alchemy</h3>
+          <p>Transforming brands into visual legends</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/portfolio-2.jpg" alt="Event Coverage" />
+        <div class="portfolio-overlay">
+          <h3>Moment Sculptors</h3>
+          <p>Capturing time in frames of wonder</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/portfolio-3.jpg" alt="Product Advertisement" />
+        <div class="portfolio-overlay">
+          <h3>Story Weavers</h3>
+          <p>Crafting product narratives that enchant</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- SERVICES -->
   <section id="services" class="section">
-    <h2>What We Offer</h2>
-    <ul>
-      <li>🎬 End-to-End Video Production</li>
-      <li>📊 Market Research & Insights</li>
-      <li>⚙️ Process Optimization</li>
-    </ul>
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-video"></i>
+        <h3>Visual Symphony</h3>
+        <p>Orchestrating your vision into a masterpiece of motion and emotion</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-camera"></i>
+        <h3>Light Painters</h3>
+        <p>Capturing souls in still frames, one click at a time</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-film"></i>
+        <h3>Digital Sorcery</h3>
+        <p>Weaving magic through pixels and imagination</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Story Architects</h3>
+        <p>Building bridges between brands and hearts</p>
+      </div>
+    </div>
   </section>
 
   <!-- WHY CHOOSE US -->
   <section id="why-us" class="section alt">
-    <h2>Why Choose Us?</h2>
-    <ul>
-      <li>✨ Expertise: Experienced, passionate team</li>
-      <li>🚀 Innovation: Always on the cutting edge</li>
-      <li>🤝 Client-Centric: Your vision comes first</li>
-    </ul>
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="fas fa-star"></i>
+        <h3>Masters of Craft</h3>
+        <p>Virtuosos in the art of visual storytelling</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-rocket"></i>
+        <h3>Digital Pioneers</h3>
+        <p>Pushing boundaries in the realm of possibilities</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-heart"></i>
+        <h3>Passionate Dreamers</h3>
+        <p>Turning visions into reality, one frame at a time</p>
+      </div>
+    </div>
   </section>
 
   <!-- CONTACT -->
-  <footer id="contact" class="footer">
-    <h2>Let’s Connect</h2>
-    <p>Email: <a href="mailto:bilavarycreation@gmail.com">bilavarycreation@gmail.com</a></p>
-    <p>Phone: <a href="tel:+917738336172">+91 77383 36172</a></p>
-    <p>© 2023 Bilavari Creations</p>
+  <section id="contact" class="section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Let's Paint Your Tomorrow</h2>
+        <p class="contact-lead">Ready to embark on a creative journey? Let's transform your vision into a masterpiece that moves hearts and minds.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:bilavarycreation@gmail.com">bilavarycreation@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+917738336172">+91 77383 36172</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Mumbai, Maharashtra, India</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Bilavari Creations Logo" class="footer-logo" />
+        <p>Painting dreams into reality, one frame at a time</p>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <p class="footer-copyright">© 2025 Bilavari Creations | Where imagination knows no bounds</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
