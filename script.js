@@ -15,40 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Custom cursor effect
-  const cursorDot = document.querySelector('.cursor-dot');
-  const cursorOutline = document.querySelector('.cursor-dot-outline');
-
-  window.addEventListener('mousemove', (e) => {
-    const posX = e.clientX;
-    const posY = e.clientY;
-
-    cursorDot.style.opacity = '1';
-    cursorOutline.style.opacity = '1';
-    
-    cursorDot.style.transform = `translate(${posX}px, ${posY}px)`;
-    cursorOutline.style.transform = `translate(${posX}px, ${posY}px)`;
-  });
-
-  // Add hover effect to interactive elements
-  document.querySelectorAll('a, button, .portfolio-item, .service-card').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursorDot.style.transform = 'scale(2)';
-      cursorOutline.style.transform = 'scale(2)';
-    });
-    
-    el.addEventListener('mouseleave', () => {
-      cursorDot.style.transform = 'scale(1)';
-      cursorOutline.style.transform = 'scale(1)';
-    });
-  });
-
-  // Intersection Observer for scroll animations
-  const observerOptions = {
-    threshold: 0.2,
-    rootMargin: '0px'
-  };
-
+  // Simplified scroll animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -56,20 +23,34 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.unobserve(entry.target);
       }
     });
-  }, observerOptions);
-
-  // Observe elements for animation
-  document.querySelectorAll('.section-content, .service-card, .portfolio-item, .feature-card').forEach(el => {
-    el.classList.add('animate-hidden');
-    observer.observe(el);
+  }, {
+    threshold: 0.2
   });
 
-  // Mobile Navigation Toggle
+  document.querySelectorAll('.section-content, .service-card, .portfolio-item')
+    .forEach(el => {
+      el.classList.add('animate-hidden');
+      observer.observe(el);
+    });
+
+  // Mobile nav
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
 
   navToggle.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    navLinks.classList.toggle('active');
+    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navToggle.contains(e.target) && 
+        !navLinks.contains(e.target) && 
+        navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      body.style.overflow = '';
+      navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    }
   });
 
   // Smooth Scroll for Navigation Links
@@ -93,9 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Responsive Navigation
   window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
-      navLinks.style.display = 'flex';
-    } else {
-      navLinks.style.display = 'none';
+      navLinks.classList.remove('active');
+      body.style.overflow = '';
+      navToggle.innerHTML = '<i class="fas fa-bars"></i>';
     }
   });
 
